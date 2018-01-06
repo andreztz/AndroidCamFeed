@@ -3,9 +3,10 @@ import sys
 ## Import AndroidCamFeed module
 from AndroidCamFeed import AndroidCamFeed
 
+
 def main():
     if not sys.argv[1] or len(sys.argv) > 2:
-        print "Usage: \n\tpython Example.py <host>:<port>"
+        print("Usage: \n\tpython Example.py <host>:<port>")
         return
 
     ## Set host
@@ -14,7 +15,6 @@ def main():
 
     ## Create new AndroidCamFeed instance
     acf = AndroidCamFeed(host)
-
     ## While camera is open
     while acf.isOpened():
         ## Read frame
